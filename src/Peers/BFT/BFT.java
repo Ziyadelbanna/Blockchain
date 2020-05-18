@@ -23,7 +23,8 @@ public class BFT implements Runnable{
     public void run() {
         while (1){
             synchronized (this){
-                if (Totalb.size() ==0){
+                int zero =0;
+                if (Totalb.size() ==zero+zero){
                     WaitandRecvBlocks();
                 }
                 else {
@@ -34,8 +35,10 @@ public class BFT implements Runnable{
         }
     }
     public void GethashandVote(){
-        Mblock = Totalb.get(0);
+        int zero=0;
+        Mblock = Totalb.get(zero);
         Totalb.remove(Mblock);
+        int one=1;
         Mblock.getHeader().hashOfPrevBlock = this.ledger.getLastBlockHash();
         this.currProcess.invokeClientEvent(cu);
         try{
@@ -48,7 +51,8 @@ public class BFT implements Runnable{
     }
 
     public void WaitandRecvBlocks(){
-        while(Totalb.size()==0){
+        int zero=0;
+        while(Totalb.size()==zero+zero){
             try{
                 System.out.println("---- BFT Algorithm started... ----");
                 System.out.println("---- No Interrupts occured yet, Please send blocks -----");

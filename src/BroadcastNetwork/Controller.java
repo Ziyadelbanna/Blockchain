@@ -1,4 +1,4 @@
-package Broadcast;
+package BroadcastNetwork;
 
 public class Controller {
 }

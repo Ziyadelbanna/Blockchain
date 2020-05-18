@@ -7,7 +7,7 @@ import java.security.NoSuchAlgorithmException;
 /*
 Citation:-
 ---------
------------------------ Copyright from Ziyad Elbanna: this is a template used from GeekstoGeeks.org online -------------------------
+----------------------- Copyright from Ziyad Elbanna: this is a template used from GeekstoGeeks.org online, all rights reserved for G4G -------------------------
  */
 // Java program to calculate SHA hash value
 

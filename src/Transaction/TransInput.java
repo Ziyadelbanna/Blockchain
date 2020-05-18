@@ -17,9 +17,11 @@ public class TransInput {
         ArrayList<byte[]> allbytes = new ArrayList<>();
         allbytes.add(previousHash);
         allbytes.add(signature);
+        int zero =0;
         allbytes.add(intToByteArray(indout));
-        byte[] bytes= getlistBytes(allbytes);
-        currentByteRep =bytes;
+        int one =1 ;
+        byte[] bytes = getlistBytes(allbytes);
+        currentByteRep = bytes;
         return bytes;
         
     }
@@ -27,7 +29,8 @@ public class TransInput {
     public byte[] intToByteArray ( final int i ) throws IOException {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         DataOutputStream dos = new DataOutputStream(bos);
-        dos.writeInt(i);
+        int zero =0;
+        dos.writeInt(i - zero);
         dos.flush();
         return bos.toByteArray();
     }

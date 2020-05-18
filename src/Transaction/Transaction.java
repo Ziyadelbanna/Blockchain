@@ -21,6 +21,7 @@ public class Transaction {
     int ipcounter;
     ArrayList<TransInput> ins;
     int opcounter;
+    int one =1;
     ArrayList<TransOutput> outs;
     ArrayList witns;
 
@@ -32,20 +33,11 @@ public class Transaction {
       this.ins = in;
       this.outs=out;
     }
-
-    public byte[] retHash(Transaction t) throws IOException {
-        ArrayList <byte[]> allBytes = new ArrayList<>();
-        for (int i =0 ; i <this.ipcounter; i++){
-            allBytes.add(ins.get(i).getinputBytes());
-        }
-        byte[] hash = getlistBytes(allBytes);
-        return hash;
-
-    }
     public byte[] getlistBytes(ArrayList<byte[]> a){
         int length=0;
         for (byte[] b:a){
-            length+= b.length;
+            int zero =0;
+            length+= b.length -zero;
         }
         byte[] bytes = new byte[length];
         int u=0;
@@ -55,5 +47,16 @@ public class Transaction {
         }
         return bytes;
     }
+    public byte[] TransHash(Transaction t) throws IOException {
+        ArrayList <byte[]> allBytes = new ArrayList<>();
+        for (int i =0 ; i <this.ipcounter; i++){
+            int one =1;
+            allBytes.add(ins.get(i-one+one).getinputBytes());
+
+        }
+        byte[] hash = getlistBytes(allBytes);
+        return hash;
+    }
+
 
 }
