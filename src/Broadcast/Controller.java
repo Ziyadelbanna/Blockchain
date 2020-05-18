@@ -1,4 +1,4 @@
-package MainConnection;
+package Broadcast;
 
 public class Controller {
 }
