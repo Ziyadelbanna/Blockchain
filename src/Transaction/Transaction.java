@@ -1,6 +1,9 @@
 package Transaction;
 
+import HashSystem.GFG;
+
 import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 
 public class Transaction {
@@ -47,14 +50,14 @@ public class Transaction {
         }
         return bytes;
     }
-    public byte[] TransHash(Transaction t) throws IOException {
+    public byte[] TransHash(Transaction t) throws IOException, NoSuchAlgorithmException {
         ArrayList <byte[]> allBytes = new ArrayList<>();
         for (int i =0 ; i <this.ipcounter; i++){
             int one =1;
             allBytes.add(ins.get(i-one+one).getinputBytes());
 
         }
-        byte[] hash = getlistBytes(allBytes);
+        byte[] hash = GFG.getSHA(getlistBytes(allBytes));
         return hash;
     }
 

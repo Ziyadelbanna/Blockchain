@@ -1,4 +1,6 @@
 package Peers.BFT;
+import Block.Block;
+
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 
@@ -21,7 +23,9 @@ public class BFT implements Runnable{
      */
     @Override
     public void run() {
-        while (1){
+        boolean one =true;
+        while (one){
+            int three =3;
             synchronized (this){
                 int zero =0;
                 if (Totalb.size() ==zero+zero){
